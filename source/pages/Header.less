@@ -1,0 +1,111 @@
+@import (reference) '../assets/css/common/mixin';
+@import "../assets/css/lib/ant-theme-vars";
+@header-prefix: g-header;
+.@{header-prefix} {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(191,195,199,0.3);
+  font-size: 14px;
+  .ant-breadcrumb {
+    float: left;
+    color: #999;
+    font-size: 14px;
+    line-height: 60px;
+  }
+  .ant-breadcrumb > span:last-child {
+    font-weight: 400;
+    color: #999;
+  }
+  .separator {
+    margin: 14px 0;
+    width: 1px;
+    height: 32px;
+    font-style: normal;
+    background-color: #f2f3f5;
+  }
+  .ant-popover-open .more {
+    transform: rotate(180deg);
+  }
+  &-r-popover {
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+    a {
+      color: @text-6;
+    }
+  }
+  &-tooltip-more {
+    padding: 4px 0;
+    line-height: 36px;
+    text-align: left;
+    .more-item {
+      padding: 0 24px;
+      font-size: 15px;
+    }
+    .more-setting {
+      border-bottom: 1px solid @separate-light;
+    }
+  }
+  &-bd {
+    height: 60px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  &-l {
+    float: left;
+    .item {
+      float: left;
+      margin: 0 20px;
+    }
+    a {
+      color: #333;
+      font-weight: 400;
+    }
+    a:hover {
+      color: #333;
+      font-weight: 400;
+    }
+  }
+  &-r {
+    float: right;
+  }
+  &-r-item {
+    float: left;
+    height: 60px;
+    margin-left: 20px;
+    .nickname {
+      color: #333;
+      cursor: pointer;
+    }
+    .icon-setting {
+      float: left;
+      width: 20px;
+      height: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 21px 20px 21px 0;
+      color: #666;
+      a {
+        color: #666;
+      }
+      .iconfont {
+        line-height: 1;
+        font-size: 18px;
+      }
+    }
+  }
+  &-r-name {
+    line-height: 60px;
+    .more {
+      transition: transform 0.5s;
+      margin-left: 8px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .icon-xiajiantou {
+      font-size: 10px;
+      color: #666;
+    }
+  }
+}
+

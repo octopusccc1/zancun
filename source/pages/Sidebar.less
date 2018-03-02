@@ -1,0 +1,90 @@
+@sidebarPrefixCls: sidebar-panel;
+.@{sidebarPrefixCls} {
+  color: #393a4e;
+  .info-container {
+    background-color: #fff;
+    .avatar {
+      width: 80px;
+      height: 110px;
+      padding-top: 30px;
+      margin: 0 110px 0 110px;
+      img {
+        width: 100%;
+        border-radius: 40px;
+      }
+    }
+    .full-name {
+      margin: 20px 0 0 100px;
+      width: 100px;
+      text-align: center;
+      line-height: 16px;
+      font-size: 15px;
+    }
+    .introduction {
+      margin: 10px 0 0 59px;
+      width: 182px;
+      font-size: 13px;
+      color: #9b9b9b;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+  &-extra {
+    margin-top: 15px;
+    height: 53px;
+    border-top: 1px solid #efeff4;
+  }
+  &-extra-item {
+    float: left;
+    width: 149px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 15px;
+    .number {
+      margin-top: 7px;
+      line-height: 18px;
+    }
+    .text {
+      margin-top: 2px;
+      color: #9b9b9b;
+      line-height: 20px;
+    }
+  }
+  &-separator {
+    width: 1px;
+    div {
+      margin-top: 11px;
+      height: 34px;
+      background-color: #e3e3e5;
+    }
+  }
+
+  &-menu {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  &-item {
+    padding-left: 105px;
+    line-height: 48px;
+    height: 48px;
+    font-size: 15px;
+    a {
+      color: #393a4e;
+    }
+    .iconfont {
+      color: #7a7e84;
+    }
+  }
+  &-item-current {
+    border-left: 2px solid #e74528;
+    background: #f6f6f6;
+  }
+  &-item a:hover,
+  &-item-current a {
+    color: #e74528;
+    .iconfont {
+      color: #e74528;
+    }
+  }
+}

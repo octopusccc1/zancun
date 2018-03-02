@@ -1,0 +1,136 @@
+@import (reference) "../../../assets/css/common/mixin";
+@import "../../../assets/css/lib/ant-theme-vars";
+
+.m-condition-choose {
+  width: 280px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 140px 0 60px 0;
+  box-shadow: @box-shadow-base;
+
+  .m-hd {
+    position: relative;
+    top: -140px;
+    width: inherit;
+    height: 140px;
+    background-color: @component-background;
+    // 用户信息显示区
+    .infor {
+      width: inherit;
+      height: 90px;
+      position: relative;
+    }
+    .text {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      color: @text-9;
+    }
+    .num {
+      position: absolute;
+      top: 38px;
+      left: 30px;
+      font-size: 28px;
+      color: @text-3;
+    }
+    // 用户选择展示区(全选、清空)
+    .operate {
+      border-top: @border-style-base @border-width-base @border-color-split;
+      border-bottom: @border-style-base @border-width-base @border-color-split;
+      width: inherit;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      .select-all-text,
+      .clear-all-text {
+        color: @text-3;
+      }
+      .select-all-count {
+        margin-left: 8px;
+        color: @text-9;
+      }
+    }
+  }
+
+  .m-bd {
+    position: relative;
+    overflow: auto;
+    top: -140px;
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,0.85);
+    padding: 20px;
+    .item + .item {
+      margin-top: 20px;
+    }
+  }
+
+  .m-ft {
+    position: relative;
+    top: -140px;
+    width: inherit;
+    height: 60px;
+    border-top: @border-style-base @border-width-base @border-color-split;
+    border-bottom: @border-style-base @border-width-base @border-color-split;
+    background-color: @component-background;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    .u-btn {
+      width: 220px;
+      height: 36px;
+    }
+  }
+}
+
+// 标签样式
+.item-tag {
+  width: 240px;
+  height: 40px;
+  background: @component-background;
+  border: @border-style-base @border-width-base @border-color-split;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .ant-tag-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: inherit;
+    margin-left: 2px;
+    .item-left {
+      .ellipsis;
+      color: @text-3;
+    }
+    .item-right {
+      color: @text-9;
+      min-width: 20px;
+    }
+    .private-tag {
+      width: 20px;
+      background: #f0f2f6;
+      display: inline-block;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 2px;
+      color: #b2b6c4;
+    }
+  }
+  .anticon-cross {
+    opacity: 0.9;
+  }
+}
+
+// 条件禁用的样式
+.item-dis {
+  .ant-tag-text {
+    .item-left {
+      color: @text-9;
+    }
+  }
+}
+

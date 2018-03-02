@@ -1,0 +1,59 @@
+@import (reference) "../../../assets/css/common/mixin";
+@import "../../../assets/css/lib/ant-theme-vars";
+
+//卡片
+.m-customer-card {
+  height: 150px;
+  background: @component-background;
+  box-shadow: @box-shadow-base;
+  border-radius: 4px;
+  display: flex;
+  padding: 30px;
+}
+
+//左边icon区域 定宽
+.left {
+  width: 25%;
+  .icon {
+    .u-img-link {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+    }
+  }
+}
+//右边文字区域 宽度自适应
+.right {
+  width: 75%;
+  flex: 1;
+  .title {
+    .u-tlt {
+      max-width: 92%;
+      display: inline-block;
+      .ellipsis;
+      margin-bottom: 8px;
+      font-size: @font-title-medium;
+      color: @text-3;
+    }
+  }
+  .content {
+    .label {
+      .clearfix();
+      width: 42px;
+      display: inline-block;
+    }
+    .form {
+      color: @text-6;
+    }
+    p + p {
+      margin-top: 12px;
+    }
+    span + span {
+      margin-left: 8px;
+    }
+  }
+}
+
+.customer-card-checked {
+  border: 2px solid @primary-color;
+}

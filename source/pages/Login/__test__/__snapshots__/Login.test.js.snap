@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> 比较快照 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    account=""
+    fields={
+      Object {
+        "password": "passowrd",
+        "remember": true,
+        "username": "username",
+      }
+    }
+    isAuthenticated={true}
+    isLoginErrorVisible={false}
+    loginErrorText=""
+    name="ssss"
+    onError={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Notice />,
+        <div
+          className="login-wrap"
+        >
+          <div
+            className="title"
+          >
+            <i
+              className="iconfont icon-expressionicon logo"
+            />
+            <span
+              className="name"
+            >
+              Prophet
+            </span>
+          </div>
+          <Form(WrappedComponent)
+            account=""
+            fields={
+              Object {
+                "password": "passowrd",
+                "remember": true,
+                "username": "username",
+              }
+            }
+            handleSubmit={[Function]}
+            isAuthenticated={true}
+            isLoginErrorVisible={false}
+            loginErrorText=""
+            name="ssss"
+            onError={[Function]}
+            validPassword={[Function]}
+            validUsername={[Function]}
+          />
+        </div>,
+      ],
+      "className": "ant-row login-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="title"
+            >
+              <i
+                className="iconfont icon-expressionicon logo"
+              />
+              <span
+                className="name"
+              >
+                Prophet
+              </span>
+            </div>,
+            <Form(WrappedComponent)
+              account=""
+              fields={
+                Object {
+                  "password": "passowrd",
+                  "remember": true,
+                  "username": "username",
+                }
+              }
+              handleSubmit={[Function]}
+              isAuthenticated={true}
+              isLoginErrorVisible={false}
+              loginErrorText=""
+              name="ssss"
+              onError={[Function]}
+              validPassword={[Function]}
+              validUsername={[Function]}
+            />,
+          ],
+          "className": "login-wrap",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="iconfont icon-expressionicon logo"
+                />,
+                <span
+                  className="name"
+                >
+                  Prophet
+                </span>,
+              ],
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "iconfont icon-expressionicon logo",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Prophet",
+                  "className": "name",
+                },
+                "ref": null,
+                "rendered": "Prophet",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "account": "",
+              "fields": Object {
+                "password": "passowrd",
+                "remember": true,
+                "username": "username",
+              },
+              "handleSubmit": [Function],
+              "isAuthenticated": true,
+              "isLoginErrorVisible": false,
+              "loginErrorText": "",
+              "name": "ssss",
+              "onError": [Function],
+              "validPassword": [Function],
+              "validUsername": [Function],
+            },
+            "ref": "loginForm",
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Notice />,
+          <div
+            className="login-wrap"
+          >
+            <div
+              className="title"
+            >
+              <i
+                className="iconfont icon-expressionicon logo"
+              />
+              <span
+                className="name"
+              >
+                Prophet
+              </span>
+            </div>
+            <Form(WrappedComponent)
+              account=""
+              fields={
+                Object {
+                  "password": "passowrd",
+                  "remember": true,
+                  "username": "username",
+                }
+              }
+              handleSubmit={[Function]}
+              isAuthenticated={true}
+              isLoginErrorVisible={false}
+              loginErrorText=""
+              name="ssss"
+              onError={[Function]}
+              validPassword={[Function]}
+              validUsername={[Function]}
+            />
+          </div>,
+        ],
+        "className": "ant-row login-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="title"
+              >
+                <i
+                  className="iconfont icon-expressionicon logo"
+                />
+                <span
+                  className="name"
+                >
+                  Prophet
+                </span>
+              </div>,
+              <Form(WrappedComponent)
+                account=""
+                fields={
+                  Object {
+                    "password": "passowrd",
+                    "remember": true,
+                    "username": "username",
+                  }
+                }
+                handleSubmit={[Function]}
+                isAuthenticated={true}
+                isLoginErrorVisible={false}
+                loginErrorText=""
+                name="ssss"
+                onError={[Function]}
+                validPassword={[Function]}
+                validUsername={[Function]}
+              />,
+            ],
+            "className": "login-wrap",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="iconfont icon-expressionicon logo"
+                  />,
+                  <span
+                    className="name"
+                  >
+                    Prophet
+                  </span>,
+                ],
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "iconfont icon-expressionicon logo",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Prophet",
+                    "className": "name",
+                  },
+                  "ref": null,
+                  "rendered": "Prophet",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "account": "",
+                "fields": Object {
+                  "password": "passowrd",
+                  "remember": true,
+                  "username": "username",
+                },
+                "handleSubmit": [Function],
+                "isAuthenticated": true,
+                "isLoginErrorVisible": false,
+                "loginErrorText": "",
+                "name": "ssss",
+                "onError": [Function],
+                "validPassword": [Function],
+                "validUsername": [Function],
+              },
+              "ref": "loginForm",
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "attachTo": <div
+      id="react-content"
+    />,
+    "childContextTypes": Object {
+      "store": [Function],
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

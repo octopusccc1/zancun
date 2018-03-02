@@ -1,0 +1,85 @@
+@import (reference) "../../../assets/css/common/mixin";
+@import "../../../assets/css/lib/ant-theme-vars";
+
+//table 本页特殊处理
+/* stylelint-disable max-nesting-depth */
+.ant-table-wrapper {
+  .ant-table {
+    border: 1px solid #e8eaed;
+    box-shadow: 0 0 0;
+  }
+  .ant-table-body {
+    border-top: 1px solid #e8eaed;
+  }
+  .ant-table-header {
+    background: #f7f8fa;
+    .ant-table-thead {
+      tr {
+        th {
+          background: #f7f8fa;
+        }
+      }
+    }
+  }
+}
+/* stylelint-disable */
+
+//dropdown 本页特殊处理
+.ant-dropdown-menu {
+  .ant-dropdown-menu-item {
+    width: 110px;
+    span {
+      display: inline-block;
+      width: 100%;
+    }
+    .u-active-menu-item {
+      color: @primary-1;
+      .clearfix();
+      .icon-duigou {
+        margin-left: 4px;
+        margin-top: 2px;
+        font-size: @font-size-base;
+        float: right;
+        line-height: 18px;
+        transform: scale(0.65);
+      }
+    }
+  }
+}
+
+.m-authority {
+  .name-column {
+    padding-left: 30px;
+  }
+  .dropdown-link {
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    .dropdown-icon {
+      display: inline-block;
+      font-size: @font-size-base;
+      margin-left: 2px;
+      transition: transform 0.5s;
+      &.arrow-up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .u-operation {
+    .edit-tab {
+      cursor: pointer;
+      color: @text-9;
+      font-size: @font-size-base;
+      &:not(.icon-shanchu) {
+        margin-right: 24px;
+      }
+      &:hover {
+        color: #36394d;
+      }
+    }
+    .disable-tab {
+      color: #e8e8e8;
+      font-size: @font-size-base;
+      margin-right: 24px;
+    }
+  }
+}

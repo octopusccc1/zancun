@@ -1,0 +1,152 @@
+@import (reference) "../../../../assets/css/common/mixin";
+@import "../../../../assets/css/lib/ant-theme-vars";
+
+//洞察项
+.u-insight-item {
+  margin: 0 10px 20px;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 #e1e4f0;
+  border-radius: 4px;
+  height: 100%;
+  //关闭按钮
+  .close-icon {
+    position: absolute;
+    cursor: pointer;
+    color: #ccc;
+    right: 10px;
+    top: 10px;
+    opacity: 0.9;
+    font-size: @font-size-base;
+    &:hover {
+      color: @text-9;
+    }
+  }
+}
+
+//LOGO
+.u-img-wrapper {
+  padding-top: 40px;
+  img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+//洞察项头部标题描述
+.u-text-wrapper {
+  flex: 1;
+  text-align: left;
+  min-width: 100px;
+  padding-top: 35px;
+  margin: 0 40px 0 30px;
+  position: relative;
+  //标题栏
+  .title {
+    //大标题
+    .u-tlt {
+      .ellipsis();
+      display: inline-block;
+      max-width: 100%;
+      font-size: @font-title-large;
+      margin-bottom: 4px;
+      color: @text-3;
+    }
+    //编辑按钮
+    .u-icon-edit {
+      position: absolute;
+      color: #ccc;
+      cursor: pointer;
+      display: none;
+      right: -25px;
+      top: 38px;
+    }
+  }
+  //内容栏
+  .u-list-item {
+    display: flex;
+    .content-title {
+      .clearfix();
+      width: 42px;
+      display: inline-block;
+      margin-right: 10px;
+      color: @text-9;
+    }
+    .content {
+      flex: 1;
+      span {
+        max-width: 100%;
+        display: inline-block;
+      }
+      .ellipsis();
+    }
+    color: @text-6;
+    font-size: @font-size-base;
+    margin-bottom: 8px;
+  }
+}
+
+//洞察项头部
+.insight-item-hd {
+  display: flex;
+  height: 180px;
+  margin: 0 30px;
+  border-bottom: 1px solid #ebedf0;
+  //hover显示编辑按钮
+  /* stylelint-disable max-nesting-depth */
+  &:hover {
+    .u-text-wrapper {
+      .title {
+        .u-icon-edit {
+          display: inline;
+        }
+      }
+    }
+  }
+  /* stylelint-enable */
+}
+
+//洞察项主体
+.insight-item-bd {
+  padding: 0 30px;
+  margin: 30px 0;
+  height: 180px;
+}
+
+//洞察项底部
+.insight-item-ft {
+  border-top: 1px solid #ebedf0;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  font-size: @font-title-small;
+  cursor: pointer;
+  .u-insight-arrow {
+    font-size: @font-size-base;
+    margin-left: 8px;
+    position: relative;
+    bottom: 1px;
+    color: @text-6;
+  }
+}
+
+//进入洞察=>链接
+.u-goInsight {
+  color: @text-3;
+  display: block;
+  &:hover {
+    color: @primary-1;
+    .u-insight-arrow {
+      color: @primary-1;
+    }
+  }
+}
+
+//模态框=>btn
+.u-edit-modal {
+  .ant-btn {
+    width: 76px;
+  }
+}

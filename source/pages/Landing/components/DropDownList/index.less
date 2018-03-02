@@ -1,0 +1,110 @@
+@import (reference) "../../../../assets/css/common/mixin";
+@import "../../../../assets/css/lib/ant-theme-vars";
+
+//弹出列表 showMoreItem
+.u-hovercard {
+  padding-left: 0;
+  ul {
+    max-height: 192px;
+    padding-right: 15px;
+    overflow: auto;
+  }
+  li {
+    span {
+      max-width: 100%;
+      &:not(.private-tag) {
+        display: inline-block;
+      }
+    }
+    .ellipsis();
+    color: @text-6;
+    font-size: @font-size-base;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 10px 10px 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100px;
+    background-color: #f7f8fa;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ant-popover-inner-content {
+    padding: 30px 5px 30px 30px;
+  }
+}
+
+//列表部分
+.bd-content {
+  color: @text-3;
+  min-width: 100px;
+  text-align: left;
+  position: relative;
+  //列表标题
+  .bd-tlt {
+    margin: 0 0 20px 0;
+    font-size: @font-title-small;
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  //列表主体
+  .u-list-item {
+    box-sizing: border-box;
+    width: 50%;
+    .u-item {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      .ellipsis();
+      font-size: @font-size-base;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 100px;
+      background-color: @active-color;
+      span {
+        max-width: 100%;
+      }
+      span:not(.private-tag) {
+        display: inline-block;
+      }
+    }
+    &:nth-child(2n-1) {
+      .u-item {
+        margin-right: 20px;
+      }
+    }
+    &:nth-child(2n) {
+      .u-item {
+        margin-left: 20px;
+      }
+    }
+  }
+  //showItem 查看更多 组件
+  .u-more {
+    cursor: pointer;
+    color: #ccc;
+    user-select: none;
+    p {
+      padding: 0 20px;
+    }
+    &:hover,
+    &.active {
+      color: #8c8c8c;
+    }
+  }
+}
+
+.private-tag {
+  width: 22px;
+  height: 22px;
+  background: #e4e7ee;
+  border-radius: 2px;
+  margin-right: 8px;
+  font-size: 12px;
+  text-align: center;
+  color: #999cab;
+  padding: 5px;
+}

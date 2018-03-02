@@ -1,0 +1,62 @@
+@import "../../../assets/css/lib/ant-theme-vars";
+.u-nav-li {
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  width: 254px;
+  height: 280px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 #dfe1e6;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  &:not(:nth-child(4n)) {
+    margin-right: 15px;
+  }
+  //外层标签
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  //图标
+  .u-nav-icon {
+    margin: 40px auto 20px;
+  }
+  //标题
+  .u-nav-tlt {
+    position: relative;
+    font-size: @font-title-large;
+    line-height: @font-title-large;
+    color: @text-3;
+    margin-bottom: 20px;
+    .icon {
+      position: relative;
+      left: 5px;
+      bottom: 2px;
+      color: #ccc;
+      font-size: @font-title-small;
+    }
+  }
+  //说明文字
+  .u-nav-p {
+    font-size: @font-size-base;
+    line-height: @font-size-base;
+    color: @text-9;
+    letter-spacing: 0;
+  }
+
+  //禁用情况
+  &.u-nav-disabled {
+    cursor: default;
+    .u-nav-icon {
+      color: @text-9;
+    }
+  }
+}
+
+//弹出框
+.u-landing-popover {
+  max-width: 240px;
+}

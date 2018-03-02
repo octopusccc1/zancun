@@ -1,0 +1,88 @@
+@import (reference) "../../assets/css/common/mixin";
+@import "../../assets/css/lib/ant-theme-vars";
+
+.main-layout-container {
+  overflow: hidden;
+}
+
+.ant-layout-content {
+  position: relative;
+  height: 100%;
+}
+
+//没有洞察
+.m-insight-empty {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
+  text-align: center;
+  p {
+    padding: 10px 0 30px;
+    color: #666;
+  }
+  img {
+    width: 440px;
+    height: 240px;
+  }
+  .u-btn-create-empty {
+    width: 122px;
+  }
+}
+
+//客群洞察列表页
+.m-insight-landing {
+  position: relative;
+  height: 100%;
+  padding: 24px 20px;
+  overflow: auto;
+  //导航头部
+  .insight-hd {
+    .clearfix();
+    padding-bottom: 30px;
+    > h3 {
+      position: relative;
+      bottom: -10px;
+      float: left;
+      font-size: @font-title-large;
+      color: #222;
+    }
+    > p {
+      position: relative;
+      bottom: -18px;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      padding-left: 10px;
+      font-size: @font-size-base;
+      color: @text-9;
+    }
+    .u-btn-create {
+      width: 122px;
+      float: right;
+    }
+  }
+  //加载更多
+  .u-load-more {
+    text-align: center;
+    font-size: 14px;
+    .no-more {
+      color: @text-9;
+    }
+    .u-btn-loadmore {
+      width: 122px;
+      height: 36px;
+      background: #fff;
+      box-shadow: 0 2px 4px 0 #e1e4f0;
+      border-radius: 2px;
+      border-color: #fff;
+    }
+  }
+  //洞察列表
+  .insight-bd {
+    .clearfix();
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
