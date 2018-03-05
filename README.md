@@ -1,4 +1,4 @@
-# react-ant-design-boilerplate 云商服react & ant design样板工程
+# 云商服react & ant design样板工程
 
 React + ant-design starter kit / boilerplate with React.js、react-router、Redux、ant-design、WebPack、Less、Jest
 
