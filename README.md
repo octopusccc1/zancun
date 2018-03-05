@@ -33,7 +33,7 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
   $ npm install
   ```
   
-  Build or Update mock data from NEI
+  Build or Update mock data from NEI，replace this_is_your_project_uuid with 1cd1d5dd82196a9c30f8568abb35353a for demo
   ```
   $ nei build -k this_is_your_project_uuid
   $ nei update -k this_is_your_project_uuid
