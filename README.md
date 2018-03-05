@@ -20,7 +20,7 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
    $ npm install -g cnpm --registry=https://registry.npm.taobao.org
    ```
 - (freemarker data mock require jdk & NEI)
-  - Install [jdk](www.oracle.com/technetwork/java/javase/downloads/index.html)
+  - Install [jdk](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
   - Install nei
   ```
   $ npm install -g nei@3.5.5
