@@ -33,16 +33,6 @@ export default {
       password,
       remember: !!password
     },
-  },
-
-  // 标签客群创建
-  createByTag: {
-    condition: null, // 用户选中标签的数据
-    defaultCondition: null, // 企业可用的标签列表
-    privateCondition: null, // 用户选中私有标签的数据
-    defaultPrivateCondition: null, // 企业可用的私有标签列表
-    isDataLoaded: false, // 标签相关数据是否加载完成
-    isPrivateDataLoaded: false, // 私有标签相关数据是否加载完成
-    isPrivateTagsNotNull: window.setting && window.setting.isPrivateTagsNotNull
   }
+
 };

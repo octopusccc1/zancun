@@ -3,14 +3,7 @@ import debug from 'debug';
 import initialState from './initialState';
 import {
   SET_NAME,
-  SET_LOGIN_RESULT,
-  SET_AJAX_ERROR,
-  SET_CONDITION,
-  SET_DATA_LOADED,
-  SET_DEFAULT,
-  SET_PRIVATE_CONDITION,
-  SET_PRIVATE_DATA_LOADED,
-  SET_PRIVATE_DEFAULT
+  SET_LOGIN_RESULT
 } from '../actions/actionTypes';
 
 const appWarn = debug('app:warn');
@@ -44,64 +37,5 @@ export const login = (state = initialState.login, action) => {
       });
     default:
       return state;
-  }
-};
-
-// 标签相关reducer
-export const createByTag = (state = initialState.createByTag, action) => {
-  switch (action.type) {
-
-    case SET_CONDITION: {
-      return Object.assign({}, state, {
-        condition: action.condition,
-      });
-    }
-
-    // 设置企业可用的标签列表
-    case SET_DEFAULT: {
-      let tags = action.tags.filter(filterValidValues);
-      // url不带id
-      return Object.assign({}, state, {
-        defaultCondition: tags,
-        condition: [],
-      });
-    }
-
-    // 设置私有标签列表
-    case SET_PRIVATE_CONDITION: {
-      return Object.assign({}, state, {
-        privateCondition: action.privateCondition,
-      });
-    }
-
-    // 设置默认私有标签列表
-    case SET_PRIVATE_DEFAULT: {
-      let privateTags = action.privateTags.filter(filterValidValues);
-      // url不带id
-      return Object.assign({}, state, {
-        defaultPrivateCondition: privateTags,
-        privateCondition: [],
-      });
-    }
-
-    case SET_AJAX_ERROR: {
-      return Object.assign({}, state);
-    }
-
-    case SET_DATA_LOADED: {
-      return Object.assign({}, state, {
-        isDataLoaded: action.isDataLoaded
-      });
-    }
-
-    case SET_PRIVATE_DATA_LOADED: {
-      return Object.assign({}, state, {
-        isPrivateDataLoaded: action.isPrivateDataLoaded
-      });
-    }
-
-    default: {
-      return state;
-    }
   }
 };

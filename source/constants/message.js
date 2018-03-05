@@ -1,6 +1,5 @@
 /**
  * 客户端提示文本，支持参数，不通类型的key加前缀以作区别
- * @author hzmajianglong@corp.netease.com
  */
 export const message = {
   // -------------------- validate -----------------------
@@ -12,13 +11,4 @@ export const message = {
 
   // -------------------- placeholder ---------------------
   PLACEHOLDER_NEW_PASSWORD: '请输入{0}-{1}位密码（包含数字、字母）',
-  // -------------------- message ---------------------
-  TAG_DISABLED_MESG: '洞察条件已失效，请重新选择',
-  TAG_PARTIAL_DISABLED_MESG: '部分洞察条件已失效，请及时更新',
-  TAG_VALUE_DISABLED_MESG: '标签内容已失效，请更新洞察条件',
-  TAG_CUSTOMER_DISABLED_MESG: '客群条件已失效，请重新选择',
-  POSITION_DISABLED_MESG: '洞察条件已失效，请重新选择',
-  POSITION_PARTIAL_DISABLED_MESG: '部分洞察条件已失效，请及时更新',
-  POSITION_CUSTOMER_DISABLED_MESG: '客群条件已失效，请重新选择',
-  POSITION_CUSTOMER_PARTIAL_DISABLED_MESG: '部分客群条件已失效，请及时更新',
 };

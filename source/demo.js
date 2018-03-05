@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import queryString from 'query-string';
-const requireContext = require.context("./components", true, /demo\/App\.js$/);
+const requireContext = require.context("./pages/components", true, /demo\/App\.js$/);
 const upcaseFirstChar = (name) => {
   if (!name || typeof name != 'string') {
     return '';
@@ -26,13 +26,13 @@ class App extends Component {
   getComponent() {
     // 异步加载组件方式1：
     // require.ensure([], () => {
-    //   const DemoApp = require(`./components/${upcaseFirstChar(queryObj.name)}/demo/App.js`);
+    //   const DemoApp = require(`./pages/components/${upcaseFirstChar(queryObj.name)}/demo/App.js`);
     //   this.setState({
     //     component: <DemoApp />,
     //   });
     // });
     // 异步加载组件方式2：
-    // import(`./components/${upcaseFirstChar(queryObj.name)}/demo/App.js`)
+    // import(`./pages/components/${upcaseFirstChar(queryObj.name)}/demo/App.js`)
     //   .then((DemoApp) => {
     //     this.setState({
     //       component: <DemoApp />,

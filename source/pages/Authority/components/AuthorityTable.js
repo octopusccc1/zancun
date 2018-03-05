@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Tooltip, Menu, Dropdown, Modal} from 'antd';
 import './AuthorityTable.less';
-import { CustomTable } from '../../../components';
+import CustomTable from 'ppfish/source/components/CustomTable';
 import {ROLE_MAP} from '../../../constants';
 import {getTimeStamp} from '../../../utils';
 

@@ -146,11 +146,11 @@ export default {
     loaders: [
       {
         test: /\.js$/,
-        include: path.join(__dirname, 'source'),
-        exclude: [
-          path.resolve(__dirname, './source/vendor'),
-          /node_modules/,
+        include: [
+          path.join(__dirname, 'source'),
+          path.join(__dirname, 'node_modules/ppfish') // 指定使用babel-loader编译ppfish
         ],
+        exclude: /(node_modules|vendor)\/(?!(ppfish)\/).*/, // 优先于include，排除ppfish
         use: [{
           loader: 'babel-loader'
         }]

@@ -1,6 +1,5 @@
 /**
  * 用于获取提示文本，支持参数
- * @author hzmajianglong@corp.netease.com
  */
 import message from '../constants';
 

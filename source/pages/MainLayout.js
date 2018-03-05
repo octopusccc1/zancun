@@ -7,7 +7,7 @@ import './MainLayout.less';
 import Header from './Header';
 import Notice from './Notice';
 import { getDynamicCls } from '../utils';
-import { DEFAULT_MENU, DEFAULT_MENU_ICON, LOCAL_SIDEBAR_COLLAPSED } from '../constants';
+import { SITE_NAME, DEFAULT_MENU, DEFAULT_MENU_ICON, LOCAL_SIDEBAR_COLLAPSED } from '../constants';
 const { Content, Sider } = Layout;
 
 class MainLayout extends Component {
@@ -86,7 +86,7 @@ class MainLayout extends Component {
           >
             <div className="logo-wrap">
               <span className="logo" href="javascript:;">
-                网易先知
+                {SITE_NAME}
               </span>
             </div>
             {this.getMenu()}

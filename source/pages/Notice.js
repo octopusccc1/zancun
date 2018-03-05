@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { isWebkit } from '../utils';
 import googleChromeSrc from '../assets/image/google.png';
 import './Notice.less';
+import { SITE_NAME } from '../constants';
 
 export default class Notice extends Component {
   static propTypes = {
@@ -27,7 +28,7 @@ export default class Notice extends Component {
             当前浏览器无法获得最佳显示效果，推荐使用新版本
             <a href={googlechrome} target="_blank">
               <img src={googleChromeSrc} width="14" height="14"/>谷歌浏览器
-            </a>访问网易先知
+            </a>访问{SITE_NAME}
             <i className="iconfont icon-guanbi" onClick={this.handleCloseNotice} />
           </p>
         </div>

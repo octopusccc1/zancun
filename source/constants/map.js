@@ -26,20 +26,6 @@ export const map = {
     2: '管理员',
     3: '普通账号'
   },
-  // 洞察详情状态
-  INSIGHT_STATUS: {
-    'LOADING': 1,
-    'CONDITION': 2,
-    'INSIGHT': 3,
-    'INVALID_ID': 4
-  },
-  // 客群创建状态
-  STATUS_MAP: {
-    1: '等待创建',
-    2: '创建中',
-    3: '创建成功',
-    4: '创建失败'
-  },
   // 客群来源
   CUSTOMER_SOURCE_MAP: {
     1: {

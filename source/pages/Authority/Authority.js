@@ -6,6 +6,7 @@ import {Button, Tabs} from 'antd';
 import AuthorityTable from './components/AuthorityTable';
 import CreateAccountModal from './components/CreateAccountModal';
 import DeveloperID from './components/DeveloperID';
+import {menu} from "../../constants";
 
 const TabPane = Tabs.TabPane;
 
@@ -96,7 +97,7 @@ class Authority extends Component {
       appSecret,
     } = this.props.developerID;
     return (
-      <MainLayout isCheckLogin={true}>
+      <MainLayout isCheckLogin={true} menu={menu.AUTHORITY}>
         <Tabs defaultActiveKey="1" className="m-authority">
           <TabPane tab="权限管理" key="1" className="page-authority">
             {this.pageHead()}

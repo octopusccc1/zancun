@@ -27,7 +27,6 @@ const instance = axios.create(defaultConfig);
  * @param {String} param.method
  * @param {String} param.params 使用Get方法传递参数时使用
  * @param {String} param.data 使用Post/Put/Delete/Patch等方法传递参数时使用
- * @author hzmajianglong@corp.netease.com
  * @return {Promise}
  */
 export function request(param) {

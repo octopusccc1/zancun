@@ -43,6 +43,7 @@
     "lodash.debounce": "^4.0.8",
     "papaparse": "^4.3.6",
     "particles.js": "^2.0.0",
+    "ppfish": "1.0.0",
     "prop-types": "^15.5.10",
     "query-string": "^4.2.2",
     "rc-queue-anim": "^1.3.1",

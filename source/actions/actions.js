@@ -3,14 +3,7 @@ import queryString from 'query-string';
 import { message } from 'antd';
 import {
   SET_NAME,
-  SET_LOGIN_RESULT,
-  SET_AJAX_ERROR,
-  SET_CONDITION,
-  SET_DATA_LOADED,
-  SET_DEFAULT,
-  SET_PRIVATE_CONDITION,
-  SET_PRIVATE_DATA_LOADED,
-  SET_PRIVATE_DEFAULT
+  SET_LOGIN_RESULT
 } from '../actions/actionTypes';
 import { setAccessToken, removeAccessToken, generateAuthPassword, request } from '../utils';
 import { LOCAL_REMEMBER_ACCOUNT, LOCAL_REMEMBER_PASSWORD } from '../constants';
@@ -127,81 +120,5 @@ export const setLoginResult = (isLoginErrorVisible, loginErrorText) => {
     type: SET_LOGIN_RESULT,
     isLoginErrorVisible,
     loginErrorText,
-  };
-};
-
-// 获取企业可用的标签列表
-export const fetchAllTagList = () => {
-  return dispatch => request({
-    url: '/api/tagging/tag/list/customer_group',
-    method: 'GET',
-  }).then(json => {
-    const data = json.result;
-    return data;
-  }, error => {
-    return dispatch(setAjaxError(error.result));
-  });
-};
-// 获取企业可用的私有标签列表
-export const fetchPrivateTagList = () => {
-  return dispatch => request({
-    url: '/api/tagging/privateTags',
-    method: 'GET',
-  }).then(json => {
-    const data = json.result;
-    return data;
-  }, error => {
-    return dispatch(setAjaxError(error.result));
-  });
-};
-// 设置企业可用的标签列表
-export const setDefault = (tags, detail) => {
-  return {
-    type: SET_DEFAULT,
-    tags,
-    detail,
-  };
-};
-// 设置企业可用的私有标签列表
-export const setPrivateDefault = (privateTags) => {
-  return {
-    type: SET_PRIVATE_DEFAULT,
-    privateTags: privateTags.data,
-  };
-};
-// 设置标签数据
-export const setCondition = (condition) => {
-  return {
-    type: SET_CONDITION,
-    condition,
-  };
-};
-// 设置标签数据
-export const setPrivateCondition = (privateCondition) => {
-  return {
-    type: SET_PRIVATE_CONDITION,
-    privateCondition,
-  };
-};
-// 接口错误
-export const setAjaxError = (ajaxError) => {
-  message.error(ajaxError);
-  return {
-    type: SET_AJAX_ERROR,
-    error: ajaxError
-  };
-};
-// 设置详情数据
-export const setDataLoaded = (isDataLoaded) => {
-  return {
-    type: SET_DATA_LOADED,
-    isDataLoaded,
-  };
-};
-// 设置详情数据
-export const setPrivateDataLoaded = (isPrivateDataLoaded) => {
-  return {
-    type: SET_PRIVATE_DATA_LOADED,
-    isPrivateDataLoaded,
   };
 };

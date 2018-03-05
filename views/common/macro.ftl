@@ -128,27 +128,32 @@
            style="flex: 0 0 160px; max-width: 160px; min-width: 160px; width: 160px;">
         <div class="ant-layout-sider-children">
           <div class="logo-wrap">
-            <span class="logo" href="javascript:;">网易先知</span>
+            <span class="logo" href="javascript:;"></span>
           </div>
-          <ul class="ant-menu ant-menu-inline ant-menu-light ant-menu-root">
+          <ul class="ant-menu ant-menu-light ant-menu-root ant-menu-inline">
+            <li class="ant-menu-item" style="padding-left: 24px;">
+              <a href="/login/">
+                <i class="iconfont menu-icon "></i><span class="nav-text">登录</span>
+              </a>
+            </li>
             <li class="ant-menu-item" style="padding-left: 24px;">
               <a href="/landing/">
-                <i class="iconfont menu-icon icon-kequndongcha"></i><span class="nav-text">客群洞察</span>
+                <i class="iconfont menu-icon icon-kequndongcha"></i><span class="nav-text">承接页</span>
               </a>
             </li>
             <li class="ant-menu-item" style="padding-left: 24px;">
-              <a href="/tagDistance/list/">
-                <i class="iconfont menu-icon icon-kequnjulei"></i><span class="nav-text">关联分析</span>
+              <a href="/setting/">
+                <i class="iconfont menu-icon icon-kequnguanli"></i><span class="nav-text">设置</span>
               </a>
             </li>
             <li class="ant-menu-item" style="padding-left: 24px;">
-              <a href="/customer/list/">
-                <i class="iconfont menu-icon icon-kequnguanli"></i><span class="nav-text">客群管理</span>
+              <a href="/authority/">
+                <i class="iconfont menu-icon icon-kequnjulei"></i><span class="nav-text">权限</span>
               </a>
             </li>
             <li class="ant-menu-item" style="padding-left: 24px;">
-              <a href="/privateTags/list/">
-                <i class="iconfont menu-icon icon-siyoubiaoqian"></i><span class="nav-text">私有标签</span>
+              <a href="/notFound/">
+                <i class="iconfont menu-icon "></i><span class="nav-text">404</span>
               </a>
             </li>
           </ul>

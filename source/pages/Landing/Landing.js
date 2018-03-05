@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './Landing.less';
 import MainLayout from '../MainLayout';
 import InsightItem from './components/InsightItem';
-import {insightType, menu} from '../../constants';
+import {menu} from '../../constants';
 import {Button, BackTop, Col} from 'antd';
-import {Loading} from '../../components';
+import Loading from 'ppfish/source/components/Loading';
 import empty from '../../assets/image/empty@2x.png';
 
 class App extends Component {
@@ -119,7 +119,7 @@ class App extends Component {
 
   render() {
     return (
-      <MainLayout isCheckLogin={true} menu={menu.INSIGHT} breadcrumb={this.breadcrumb}>
+      <MainLayout isCheckLogin={true} menu={menu.LANDING} breadcrumb={this.breadcrumb}>
         {this.getInsightPage()}
         <BackTop target={() => this.refs.list} key="insight-backToTop"/>
       </MainLayout>
