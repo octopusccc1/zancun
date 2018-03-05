@@ -4,7 +4,7 @@ import {Icon, Modal, Tooltip} from 'antd';
 import InsightEditModal from '../InsightEditModal';
 import DropDownList from '../DropDownList';
 import {getTimeStamp, formatUnit, deepTrim, distinguishTagType} from '../../../../utils';
-import {INSIGHT_ICON_DEFAULT, CUSTOMER_SOURCE_MAP} from '../../../../constants';
+import {INSIGHT_ICON_DEFAULT} from '../../../../constants';
 import './index.less';
 
 const confirm = Modal.confirm;
@@ -78,7 +78,7 @@ class InsightItem extends Component {
       // 标签创建有两种方式：公共标签 and 私有标签
       index = distinguishTagType(conditionList);
     }
-    const SOURCE = CUSTOMER_SOURCE_MAP[index] || {type: '', landing_image: INSIGHT_ICON_DEFAULT};
+    const SOURCE = {type: '', landing_image: INSIGHT_ICON_DEFAULT};
     const {type, landing_image} = SOURCE;
     const tooltip = `基于${type}创建洞察`;
     return (
@@ -138,8 +138,7 @@ class InsightItem extends Component {
       // 标签创建有两种方式：公共标签 and 私有标签
       index = distinguishTagType(conditionList);
     }
-    const SOURCE = CUSTOMER_SOURCE_MAP[index] || {};
-    const redirectHref = `${SOURCE['insight_link']}?insightId=${id}`;
+    const redirectHref = '#';
     return (
       <div className="insight-item-ft">
         <a href={redirectHref} className="u-goInsight">进入洞察
