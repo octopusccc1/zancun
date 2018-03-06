@@ -79,11 +79,11 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
 
 ## Pages Demo
 
-run npm start and open [Pages Demo](localhost:3000/login/) on browser
+run npm start and open [Pages Demo](http://localhost:3000/login/) on browser
 
 ## UI Components Demo
 
-run npm start and open [UI Components Demo](localhost:3000/demo) on browser
+run npm start and open [UI Components Demo](http://localhost:3000/demo) on browser
 
 ## The directory structure
 
