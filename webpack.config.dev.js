@@ -113,10 +113,11 @@ export default {
       {
         test: /\.js$/,
         include: [
-          path.join(__dirname, 'source'),
-          path.join(__dirname, 'node_modules/ppfish') // 指定使用babel-loader编译ppfish
+          path.resolve(__dirname, 'source'),
+          // issues: [Symlinks in project - loader not working when using include](https://github.com/webpack/webpack/issues/1643)
+          fs.realpathSync(__dirname + '/node_modules/ppfish') // 指定使用babel-loader编译ppfish
         ],
-        exclude: /(node_modules|vendor)\/(?!(ppfish)\/).*/, // 优先于include，排除ppfish
+        // exclude: /(node_modules|vendor)\/(?!(ppfish)\/).*/, // 优先于include，排除ppfish
         use: [{
           loader: 'babel-loader',
           options: {
@@ -164,7 +165,7 @@ export default {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, './source/assets/css/lib'),
-          path.join(__dirname, 'node_modules/antd')
+          fs.realpathSync(__dirname + '/node_modules/antd')
         ],
         use: [{
           loader: 'style-loader'
