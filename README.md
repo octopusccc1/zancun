@@ -46,7 +46,7 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
   
   Run the local mock service
   ```
-  $ npm run start:mock
+  $ nei server
   ```
 
   Build scripts ``````and css etc.
@@ -70,16 +70,20 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
 - [redux](https://github.com/reactjs/redux)
 - [redux-devtools](https://github.com/gaearon/redux-devtools)
 - [redux-devtools-dock-monitor](https://github.com/gaearon/redux-devtools-dock-monitor)
+- [NEI](https://nei.netease.com/)
 - [WebPack](http://webpack.github.io/docs/)
 - [Less](https://github.com/less/less.js)
 - [Jest](https://facebook.github.io/jest/)
 - [enzyme](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
 - [debug](https://github.com/visionmedia/debug)
 
+## Pages Demo
 
-## Demo
+run npm start and open [Pages Demo](localhost:3000/login/) on browser
 
-run npm start and open [react component demo](localhost:3000/demo) on browser
+## UI Components Demo
+
+run npm start and open [UI Components Demo](localhost:3000/demo) on browser
 
 ## The directory structure
 
