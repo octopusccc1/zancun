@@ -58,23 +58,6 @@ const urlConfig = [
   //   realPath: '/customerCreate/customerCreate.html'
   // },
   '/customer/createByTag',
-  '/customer/createByImport',
-  '/customer/list',
-  '/customer/createByPOI',
-  '/insight/createByPOI',
-  '/customer/createByCombination',
-  '/insight/createByOriginal',
-  '/insight/createByTag',
-  '/customer/createByPosition',
-  '/insight/createByPosition',
-  '/customer/createByExpansion',
-  '/customer/createByAdTargeting',
-  '/insight/create',
-  '/customer/create',
-  '/tagDistance/list',
-  '/tagDistance/create',
-  '/tagDistance/detail',
-  '/privateTags/list',
 ];
 
 // Run Browsersync and use middleware for Hot Module Replacement

@@ -7,4 +7,3 @@ export * from './number';
 export * from './string';
 export * from './message';
 export * from './table';
-export * from './tag';
