@@ -21,7 +21,7 @@ React + ant-design starter kit / boilerplate with React.js、react-router、Redu
    ```
 - (freemarker data mock require jdk & NEI)
   - Install [jdk](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-  - Install nei
+  - Setting JAVA_HOME,  types ```$JAVA_HOME/bin/java -version``` to check if install successfully
   ```
   $ npm install -g nei@3.5.5
   ```
