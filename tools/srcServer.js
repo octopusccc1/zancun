@@ -15,6 +15,7 @@ import webpackConfig from '../webpack.config.dev';
 
 const bundler = webpack(webpackConfig);
 const ajaxPrefix = getConfig().ajaxPrefix;
+const dbPrefix = '/db/api';
 
 const upcaseFirstChar = (name) => {
   if (!name || typeof name != 'string') {
@@ -26,6 +27,11 @@ const upcaseFirstChar = (name) => {
 };
 const apiProxy = proxy(ajaxPrefix, {
   target: 'http://localhost:8002', // nei 默认使用8002端口
+  changeOrigin: true,
+  ws: true
+});
+const dbProxy = proxy(dbPrefix, {
+  target: 'http://localhost:4001',
   changeOrigin: true,
   ws: true
 });
@@ -67,6 +73,7 @@ browserSync({
   },
   middleware: [
     apiProxy,
+    dbProxy,
     // 处理开发环境下虚拟路径到物理路径的url path映射
     function(req, res, next) {
       // mock 服务器静态资源请求
