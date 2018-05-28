@@ -3,8 +3,8 @@ import md5 from 'crypto-js/md5';
 import encHex from 'crypto-js/enc-hex';
 import Cookies from 'js-cookie';
 import constants from '../constants/';
-import { getConfig } from '../config';
-const config = getConfig();
+import config from '../config';
+
 const { ACCESS_TOKEN, USER_INFO } = constants;
 
 // password 加密

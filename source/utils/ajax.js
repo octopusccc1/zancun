@@ -2,8 +2,8 @@
 import axios from 'axios';
 import debug from 'debug';
 import { redirectLogin, removeAccessToken } from './userInfo';
-import { getConfig } from '../config';
-const config = getConfig();
+import config from '../config';
+
 const ajaxPrefix = config.ajaxPrefix;
 const ajaxError = debug('ajax:error');
 const ajaxLog = debug('ajax:log');

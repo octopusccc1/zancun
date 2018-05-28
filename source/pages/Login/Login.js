@@ -5,9 +5,10 @@ import { Form, Input, Button, Checkbox, Tooltip } from 'antd';
 import Notice from '../Notice';
 import '../../assets/css/common/index.less';
 import './Login.less';
-import { getConfig } from '../../config';
+import config from '../../config';
 import { MAX_PASSWORD_LEN } from '../../constants';
-const url = getConfig().url;
+
+const url = config.url;
 const createForm = Form.create;
 const FormItem = Form.Item;
 const onFieldsChange = (props, fields) => {

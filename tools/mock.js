@@ -6,12 +6,12 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 import { chalkSuccess } from './chalkConfig';
-import { getConfig } from '../source/config';
+import config from '../source/config';
 
 let server = null;
 const db = './database-mocks/db.json';
 const middlewares = jsonServer.defaults();
-const ajaxPrefix = getConfig().ajaxPrefix;
+const ajaxPrefix = config.ajaxPrefix;
 let router = jsonServer.router(db);
 
 function start(){

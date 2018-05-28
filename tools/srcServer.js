@@ -10,11 +10,11 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import proxy from 'http-proxy-middleware';
-import { getConfig } from '../source/config';
+import config from '../source/config';
 import webpackConfig from '../webpack.config.dev';
 
 const bundler = webpack(webpackConfig);
-const ajaxPrefix = getConfig().ajaxPrefix;
+const ajaxPrefix = config.ajaxPrefix;
 const dbPrefix = '/db/api';
 
 const upcaseFirstChar = (name) => {

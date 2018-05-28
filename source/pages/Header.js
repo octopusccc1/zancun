@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import { loadLogout } from '../actions/actions';
 import { redirectLogin } from '../utils';
 import { Row, Col, Breadcrumb, Popover } from 'antd';
-import { getConfig } from '../config';
+import config from '../config';
 
-const config = getConfig();
 import './Header.less';
 
 class Header extends Component {

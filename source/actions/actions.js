@@ -7,8 +7,7 @@ import {
 } from '../actions/actionTypes';
 import { setAccessToken, removeAccessToken, generateAuthPassword, request } from '../utils';
 import { LOCAL_REMEMBER_ACCOUNT, LOCAL_REMEMBER_PASSWORD } from '../constants';
-import { getConfig } from '../config';
-const config = getConfig();
+import config from '../config';
 
 // 获取登录信息
 export const fetchLogin = (fields, success) => {
