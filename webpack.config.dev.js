@@ -108,10 +108,24 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ].concat(getHtmlWebpackPlugin()),
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        include: [
+          path.resolve(__dirname, 'source'),
+          // issues: [Symlinks in project - loader not working when using include](https://github.com/webpack/webpack/issues/1643)
+          fs.realpathSync(__dirname + '/node_modules/ppfish') // 指定使用awesome-typescript-loader编译ppfish源码
+        ],
+        use: [{
+          loader: 'awesome-typescript-loader'
+        }]
+      },
+      {
+        test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'source'),
           // issues: [Symlinks in project - loader not working when using include](https://github.com/webpack/webpack/issues/1643)
@@ -163,10 +177,6 @@ export default {
       },
       {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, './source/assets/css/lib'),
-          fs.realpathSync(__dirname + '/node_modules/antd')
-        ],
         use: [{
           loader: 'style-loader'
         }, {

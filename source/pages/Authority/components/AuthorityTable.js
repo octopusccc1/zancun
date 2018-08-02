@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {Tooltip, Menu, Dropdown, Modal} from 'antd';
+import { Menu, Dropdown} from 'antd';
+import {Table, Tooltip, Modal } from 'ppfish';
 import './AuthorityTable.less';
-import CustomTable from 'ppfish/source/components/CustomTable';
 import {ROLE_MAP} from '../../../constants';
 import {getTimeStamp} from '../../../utils';
 
@@ -220,13 +220,12 @@ class AuthorityTable extends Component {
     ];
 
     return (
-      <CustomTable columns={columns}
-                   dataSource={list}
-                   loading={isListLoading}
-                   offsetHeight={367}
-                   totalNum={totalNum}
-                   onChange={this.handleTableChange}
-                   rowKey="id"/>
+      <Table columns={columns}
+             dataSource={list}
+             loading={isListLoading}
+             totalNum={totalNum}
+             onChange={this.handleTableChange}
+             rowKey="id"/>
     );
   }
 }

@@ -83,6 +83,7 @@ export default {
     libs: [
       'babel-polyfill',
       'antd',
+      'ppfish',
       'react',
       'react-dom',
       'react-router',
@@ -142,10 +143,24 @@ export default {
         to: './vendor'
       }])
     ]),
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        include: [
+          path.resolve(__dirname, 'source'),
+          // issues: [Symlinks in project - loader not working when using include](https://github.com/webpack/webpack/issues/1643)
+          fs.realpathSync(__dirname + '/node_modules/ppfish') // 指定使用awesome-typescript-loader编译ppfish源码
+        ],
+        use: [{
+          loader: 'awesome-typescript-loader'
+        }]
+      },
+      {
+        test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, 'source'),
           // issues: [Symlinks in project - loader not working when using include](https://github.com/webpack/webpack/issues/1643)
@@ -198,7 +213,8 @@ export default {
         test: /\.less$/,
         include: [
           path.resolve(__dirname, './source/assets/css/lib'),
-          fs.realpathSync(__dirname + '/node_modules/antd')
+          fs.realpathSync(__dirname + '/node_modules/antd'),
+          fs.realpathSync(__dirname + '/node_modules/ppfish'),
         ],
         use: extractLessLib.extract({
           use: [{
@@ -227,7 +243,8 @@ export default {
         test: /\.less$/,
         exclude: [
           path.resolve(__dirname, './source/assets/css/lib'),
-          fs.realpathSync(__dirname + '/node_modules/antd')
+          fs.realpathSync(__dirname + '/node_modules/antd'),
+          fs.realpathSync(__dirname + '/node_modules/ppfish'),
         ],
         use: extractLessStyle.extract({
           use: [{

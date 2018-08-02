@@ -5,7 +5,7 @@ import MainLayout from '../MainLayout';
 import InsightItem from './components/InsightItem';
 import {menu} from '../../constants';
 import {Button, BackTop, Col} from 'antd';
-import Loading from 'ppfish/source/components/Loading';
+import {Spin} from 'ppfish';
 import empty from '../../assets/image/empty@2x.png';
 
 class App extends Component {
@@ -84,8 +84,8 @@ class App extends Component {
     if (totalNum > 0) {
       return (
         <div className="m-insight-landing" ref="list">
-          {this.state.isFirstLoading ? <Loading/> :
-            [<div key="insight-list">
+          <Spin tip="加载中" spinning={this.state.isFirstLoading}>
+            <div key="insight-list">
               {header}
               <div className="insight-bd">
                 {list.map((insightItem) =>
@@ -98,8 +98,9 @@ class App extends Component {
                   </Col>
                 )}
               </div>
-            </div>, loadBtn]
-          }
+            </div>
+            {loadBtn}
+          </Spin>
         </div>
       );
     } else {
