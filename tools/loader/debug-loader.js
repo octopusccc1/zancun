@@ -1,4 +1,4 @@
-/* eslint-disable import/default */
+/* eslint-disable */
 
 import loaderUtils from 'loader-utils';
 
@@ -16,3 +16,4 @@ export default function (source) {
 
   return source;
 }
+/* eslint-enable */

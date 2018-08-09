@@ -9,9 +9,6 @@ import { travelDir, getEntries, getEntireName, getReplParams } from './tools/hel
 
 const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './source/assets/css/lib/ant-theme-vars.less'),
   'utf8'));
-// lessToJs does not support @icon-url: "some-string",
-// so we are manually adding it to the produced themeVariables js object here
-themeVariables["@icon-url"] = "'https://at.alicdn.com/t/font_zck90zmlh7hf47vi'";
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('development'),
   __DEV__: true
