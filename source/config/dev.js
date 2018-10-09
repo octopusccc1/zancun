@@ -12,7 +12,8 @@ export default {
     // 登录页面
     login: '/login/',
     // landing page
-    landing: '/landing/'
+    landing: '/landing/',
+    detailPage: '/detailPage/'
   },
   useFrontCookie: true
 };

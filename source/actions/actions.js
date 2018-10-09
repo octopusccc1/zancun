@@ -34,7 +34,7 @@ export const fetchLogin = (fields, success) => {
       localStorage.removeItem(LOCAL_REMEMBER_PASSWORD);
     }
     return request({
-      url: '/api/prophet/user/login',
+      url: '/api/user/login',
       method: 'POST',
       data: {
         // 手机号

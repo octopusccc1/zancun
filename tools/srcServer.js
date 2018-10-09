@@ -50,6 +50,18 @@ const urlConfig = [
     realPath: '/setting/setting.html'
   },
   {
+    virtualPath: '/detailPage/',
+    realPath: '/detailPage/detailPage.html'
+  },
+  {
+    virtualPath: '/formPage/',
+    realPath: '/formPage/formPage.html'
+  },
+  {
+    virtualPath: '/abnormalPage/',
+    realPath: '/abnormalPage/abnormalPage.html'
+  },
+  {
     virtualPath: '/authority/',
     realPath: '/authority/authority.html'
   },

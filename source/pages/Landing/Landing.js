@@ -1,128 +1,140 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Landing.less';
 import MainLayout from '../MainLayout';
 import InsightItem from './components/InsightItem';
-import {menu} from '../../constants';
-import {Button, BackTop, Col} from 'antd';
-import {Spin} from 'ppfish';
+import { menu } from '../../constants';
+import { Button, BackTop, Col } from 'antd';
+import { Spin, Table, Divider, Icon, Modal } from 'ppfish';
 import empty from '../../assets/image/empty@2x.png';
 
 class App extends Component {
-
-  static propTypes = {
-    totalNum: PropTypes.number,
-    list: PropTypes.array,
-    offset: PropTypes.number,
-    allLoaded: PropTypes.bool,
-    isInsightLoading: PropTypes.bool,
-    deleteInsight: PropTypes.func,
-    editInsight: PropTypes.func,
-    loadInsight: PropTypes.func,
-    setTotalNum: PropTypes.func
-  };
-
-  static defaultProps = {
-    totalNum: 0,
-    list: [],
-    offset: 0,
-    allLoaded: false,
-    isInsightLoading: false,
-  };
-
   constructor(props) {
     super(props);
-    this.state = {
-      isFirstLoading: true
-    };
     // 设置面包屑
     this.breadcrumb = [{
-      text: '客群洞察'
+      text: '列表页'
     }];
-    this.props.totalNum > 0 && this.loadInsight();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (!nextProps.isInsightLoading && this.state.isFirstLoading) {
-      this.setState({
-        isFirstLoading: false
-      });
+    this.state = {
+      visible: false
     }
   }
-
-  loadInsight = () => {
-    const {loadInsight, offset} = this.props;
-    loadInsight(offset);
-  };
-
-  getInsightPage() {
-    const {list, totalNum, isInsightLoading, allLoaded, deleteInsight, editInsight} = this.props;
-    const header = (
-      <div className="insight-hd">
-        <h3>客群洞察</h3>
-        <p>共 {totalNum} 个洞察</p>
-        <a href="/insight/create/">
-          <Button type="primary" className="u-btn-create" size="large">
-            创建洞察
-          </Button>
-        </a>
-      </div>
-    );
-    const loadBtn = (
-      <div className="u-load-more ant-col-24" key="loadbtn">
-        {allLoaded ?
-          <span className="no-more">没有更多了</span>
-          :
-          <Button loading={isInsightLoading} onClick={this.loadInsight}
-                  className="u-btn-loadmore"
-                  size="large">
-            查看更多
-          </Button>
-        }
-      </div>
-    );
-    if (totalNum > 0) {
-      return (
-        <div className="m-insight-landing" ref="list">
-          <Spin tip="加载中" spinning={this.state.isFirstLoading}>
-            <div key="insight-list">
-              {header}
-              <div className="insight-bd">
-                {list.map((insightItem) =>
-                  <Col span={12} xxl={8} key={insightItem.id}>
-                    <InsightItem
-                      {...insightItem}
-                      editInsight={editInsight}
-                      deleteInsight={deleteInsight}
-                    />
-                  </Col>
-                )}
-              </div>
-            </div>
-            {loadBtn}
-          </Spin>
-        </div>
-      );
-    } else {
-      return (
-        <div className="m-insight-empty" ref="list">
-          <img src={empty} alt="当前没有洞察"/>
-          <p>当前暂无洞察</p>
-          <a href="/insight/create/">
-            <Button className="u-btn-create-empty" type="primary" size="large">
-              创建洞察
-            </Button>
-          </a>
-        </div>
-      );
-    }
+  handleModal = () => {
+    this.setState({
+      visible: true
+    })
   }
-
+  hideModal = () => {
+    this.setState({
+      visible: false
+    })
+  }
+  confirm = () => {
+    Modal.confirm({
+      title: 'Confirm',
+      content: 'Bla bla ...',
+      okText: '确认',
+      cancelText: '取消',
+    });
+  }
   render() {
+    const columns = [{
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      width: '15%',
+      render: text => <a href="javascript:;">{text}</a>,
+    }, {
+      title: 'Age',
+      dataIndex: 'age',
+      key: 'age',
+      width: '15%',
+    }, {
+      title: 'Address',
+      dataIndex: 'address',
+      key: 'address',
+      width: '30%',
+    }, {
+      title: 'Action',
+      key: 'action',
+      width: '40%',
+      render: (text, record) => (
+        <span>
+          <a href="javascript:;" onClick={this.handleModal}>编辑</a>
+          <Divider type="vertical" />
+          <a href="javascript:;">Delete</a>
+          <Divider type="vertical" />
+          <a href="javascript:;" className="fishd-dropdown-link">
+            More actions <Icon type="down" />
+          </a>
+        </span>
+      ),
+    }];
+
+    const data = [{
+      key: '1',
+      name: 'John Brown',
+      age: 32,
+      address: 'New York No. 1 Lake Park',
+    }, {
+      key: '2',
+      name: 'Jim Green',
+      age: 42,
+      address: 'London No. 1 Lake Park',
+    }, {
+      key: '3',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park',
+    },{
+      key: '4',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park',
+    },{
+      key: '5',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park',
+    },{
+      key: '6',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park',
+    },{
+      key: '7',
+      name: 'Joe Black',
+      age: 32,
+      address: 'Sidney No. 1 Lake Park',
+    }];
     return (
       <MainLayout isCheckLogin={true} menu={menu.LANDING} breadcrumb={this.breadcrumb}>
-        {this.getInsightPage()}
-        <BackTop target={() => this.refs.list} key="insight-backToTop"/>
+
+        <div className="m-insight-landing">
+          <div className="u-landing-hd">
+            <div className="landing-hd-left">
+              <h3 className="landing-hd-title">列表</h3>
+            </div>
+            <div className="landing-hd-right"></div>
+          </div>
+          <Modal
+            title="Modal"
+            visible={this.state.visible}
+            onOk={this.hideModal}
+            onCancel={this.hideModal}
+            okText="确认"
+            cancelText="取消"
+          >
+            <p>Bla bla ...</p>
+            <p>Bla bla ...</p>
+            <p>Bla bla ...</p>
+          </Modal>
+          <Table
+            columns={columns}
+            dataSource={data}
+            scroll={{ y: 'calc( 100vh - 313px )' }}
+          />
+        </div>
       </MainLayout>
     );
   }

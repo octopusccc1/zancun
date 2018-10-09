@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Layout, Menu, Icon } from 'antd';
+import {Layout} from 'ppfish';
+import { Menu, Icon } from 'antd';
 import 'antd/lib/style/v2-compatible-reset';
 import '../assets/css/common/index.less';
 import './MainLayout.less';
